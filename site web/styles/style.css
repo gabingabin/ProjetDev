@@ -1,0 +1,631 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EBF4FF;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  justify-content: stretch;
+  align-self: start; }
+
+a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease; }
+  a a:hover {
+    color: tomato;
+    text-decoration: underline; }
+
+.item-menuHamburger {
+  display: inline-block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  user-select: none;
+  -webkit-user-select: none; }
+  .item-menuHamburger input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2; }
+  .item-menuHamburger span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+  .item-menuHamburger span:first-child {
+    transform-origin: 0% 0%; }
+  .item-menuHamburger span:nth-last-child(2) {
+    transform-origin: 0% 100%; }
+  .item-menuHamburger input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #374664; }
+  .item-menuHamburger input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2); }
+  .item-menuHamburger input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px); }
+  .item-menuHamburger input:checked ~ ul {
+    transform: none; }
+
+.menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 115px;
+  background-color: grey;
+  opacity: 0.5;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
+  .menu li {
+    padding: 25px 0;
+    font-size: 26px;
+    font-family: helvetica;
+    color: #374664;
+    text-align: center; }
+  .menu li:hover {
+    color: red;
+    transition-duration: 0.5s; }
+
+.item-menuHamburger input:checked ~ ul {
+  transform: none; }
+
+.menu img {
+  margin-top: -50px;
+  margin-left: -95px;
+  width: 470px;
+  height: 370px; }
+
+.menu p {
+  text-align: center;
+  font-size: 26px;
+  font-family: helvetica;
+  color: #374664;
+  margin-top: 100px; }
+
+.item-VisualPlan {
+  display: none;
+  margin: 0 auto;
+  margin-top: -100px; }
+  .item-VisualPlan img {
+    width: 500px;
+    height: 350px; }
+
+.item-langue {
+  display: inline-block;
+  margin-top: 10px; }
+
+.Copyright{
+  display: block;
+  position: absolute;
+  top: 98%;
+  left: 90%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.5rem;
+  color: #707070;
+}
+.Privacy{
+  display: block;
+  position: absolute;
+  top: 96%;
+  left: 95.3%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.5rem;
+}
+.Privacy a{
+  color: #707070;
+}
+
+.button{
+  display: block;
+  top : 55%;
+  left : 16%;
+  position: absolute;
+}
+
+.button input{
+  border-radius: 30px;
+  font-size: 1em;
+  width: 130%;
+  padding: 18px;
+  border: 1px solid #27375D;
+}
+.button: {
+color: white;
+}
+
+
+.VirtualAdvantage{
+  display: block;
+  top : 3%;
+  left : 10%;
+  max-width: 10%;
+  position: absolute;
+}
+
+.logotype{
+  width: 110px;
+  position: absolute;
+  top: 20%;
+  left: 16%;
+}
+
+.Title{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  position: absolute;
+  color: #27375D;
+  top: 29%;
+  left: 16%;
+}
+.TexT{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  color : #707070;
+  position: absolute;
+  top: 42%;
+  left: 16%;
+}
+
+.background {
+	  background-image: url(../images/map.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 5%;
+    right: 0;
+    bottom: 0;
+    left: 20%;
+    max-width: 1000px;
+    max-height: 706px;
+    z-index: -2;
+    border: solid 3px #112C5D;
+}
+
+
+.immeuble{
+  position: absolute;
+  z-index: 10;
+  margin:auto ;
+  left: 31.5%;
+  top: 35%;
+  max-height:30.5%;
+}
+.immeuble:hover{
+  opacity: 0.5;
+}
+.bar {
+  position: absolute;
+  z-index: 10;
+  margin: ;
+  left: 23%;
+  top: 82%;
+  height: 15%;
+}
+.bar:hover{
+  opacity: 0.5;
+}
+.bateau {
+  position: absolute;
+  z-index: 10;
+  margin: ;
+  left: 8%;
+  top: 37%;
+  height: 10%;
+}
+.bateau:hover{
+  opacity: 0.5;
+}
+.gymnas {
+  position: absolute;
+  z-index: 10;
+  margin: ;
+  left: 88%;
+  top: 53%;
+  height: 13%;
+}
+.gymnas:hover{
+  opacity: 0.5;
+}
+.hotel {
+  position: absolute;
+  z-index: 10;
+  margin: ;
+  left: 36%;
+  top: 65%;
+  height: 15%;
+}
+.hotel:hover{
+  opacity: 0.5;
+}
+.magazin {
+  position: absolute;
+  z-index: 10;
+  margin: ;
+  left: 65%;
+  top: 44%;
+  height: 13%;
+}
+.magazin:hover{
+  opacity: 0.5;
+}
+.maison {
+  position: absolute;
+  z-index: 10;
+  margin: ;
+  left: 21%;
+  top: 18%;
+  height: 13.5%;
+}
+.maison:hover{
+  opacity: 0.5;
+}
+
+.maisoninonde {
+  position: absolute;
+  z-index: 10;
+  margin: ;
+  left: 29%;
+  top: 6%;
+  height: 12%;
+}
+.maisoninonde:hover{
+  opacity: 0.5;
+}
+
+.maisonconstruction {
+  position: absolute;
+  z-index: 10;
+  margin: ;
+  left: 75%;
+  top: 10%;
+  height: 20%;
+}
+.maisonconstruction:hover{
+  opacity: 0.5;
+}
+
+.marché {
+  position: absolute;
+  z-index: 10;
+  margin: ;
+  left: 56%;
+  top: 61%;
+  height: 13%;
+}
+.marché:hover{
+  opacity: 0.5;
+}
+
+.museum {
+  position: absolute;
+  z-index: 10;
+  margin: ;
+  left: 72%;
+  top: 57.5%;
+  height: 15.5%;
+}
+.museum:hover{
+  opacity: 0.5;
+}
+
+.restaurant {
+  position: absolute;
+  z-index: 10;
+  margin: ;
+  left: 10%;
+  top: 67%;
+  height: 17%;
+}
+.restaurant:hover{
+  opacity: 0.5;
+}
+
+.spa {
+  position: absolute;
+  z-index: 10;
+  margin: ;
+  left: 46.75%;
+  top: 23%;
+  height: 15%;
+}
+.spa:hover{
+  opacity: 0.5;
+}
+
+.teatro {
+  position: absolute;
+  z-index: 10;
+  margin: ;
+  left: 62%;
+  top: 76%;
+  height: 17%;
+}
+.teatro:hover{
+  opacity: 0.5;
+}
+
+/* media 1024px */
+
+@media all and (max-width: 1024px) {
+  .background {
+  	  background-image: url(../images/map.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: block;
+      position: absolute;
+      margin: auto;
+      top: 5%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      max-width: 800px;
+      max-height: 565px;
+      z-index: -2;
+      border: solid 3px #112C5D;
+  }
+  .Copyright{
+    display: block;
+    position: absolute;
+    top: 98%;
+    left: 90%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.5rem;
+    color: #707070;
+  }
+  .Privacy{
+    display: block;
+    position: absolute;
+    top: 96%;
+    left: 95.3%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.5rem;
+  }
+  .Privacy a{
+    color: #707070;
+  }
+
+  .button{
+    display: block;
+    top : 85%;
+    left : 37%;
+    position: absolute;
+  }
+
+  .button input{
+    border-radius: 30px;
+    font-size: 1em;
+    width: 130%;
+    padding: 18px;
+    border: 1px solid #27375D;
+  }
+  .button: {
+  color: white;
+  }
+
+
+  .VirtualAdvantage{
+    display: block;
+    top : 4%;
+    left : 13%;
+    max-width: 10%;
+    position: absolute;
+  }
+
+  .logotype{
+    width: 110px;
+    position: absolute;
+    top: 5%;
+    left: 43%;
+  }
+
+  .Title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    position: absolute;
+    color: #27375D;
+    top: 29%;
+    left: 16%;
+    display: none;
+  }
+  .TexT{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color : #707070;
+    position: absolute;
+    top: 42%;
+    left: 16%;
+    display: none;
+  }
+
+}
+
+/* media 1440px */
+
+@media all and (min-width: 1440px) {
+  .button{
+    display: block;
+    top : 55%;
+    left : 16%;
+    position: absolute;
+  }
+
+  .button input{
+    border-radius: 30px;
+    font-size: 1em;
+    width: 130%;
+    padding: 18px;
+    border: 1px solid #27375D;
+  }
+  .button: {
+  color: white;
+  }
+
+
+  .VirtualAdvantage{
+    display: block;
+    top : 3%;
+    left : 10%;
+    max-width: 10%;
+    position: absolute;
+  }
+
+  .logotype{
+    width: 110px;
+    position: absolute;
+    top: 20%;
+    left: 16%;
+  }
+
+  .Title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    position: absolute;
+    color: #27375D;
+    top: 29%;
+    left: 16%;
+  }
+  .TexT{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color : #707070;
+    position: absolute;
+    top: 42%;
+    left: 16%;
+  }
+
+  .background {
+  	  background-image: url(../images/map.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: block;
+      position: absolute;
+      margin: auto;
+      top: 5%;
+      right: 0;
+      bottom: 0;
+      left: 20%;
+      max-width: 1000px;
+      max-height: 706px;
+      z-index: -2;
+      border: solid 3px #112C5D;
+  }
+
+}
+
+@media all and (min-width: 1920px) {
+  .Copyright{
+    display: block;
+    position: absolute;
+    top: 98%;
+    left: 90%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.5rem;
+    color: #707070;
+  }
+  .Privacy{
+    display: block;
+    position: absolute;
+    top: 96%;
+    left: 95.3%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.5rem;
+  }
+  .Privacy a{
+    color: #707070;
+  }
+
+  .button{
+    display: block;
+    top : 55%;
+    left : 16%;
+    position: absolute;
+  }
+
+  .button input{
+    border-radius: 30px;
+    font-size: 1em;
+    width: 130%;
+    padding: 18px;
+    border: 1px solid #27375D;
+  }
+  .button: {
+  color: white;
+  }
+
+
+  .VirtualAdvantage{
+    display: block;
+    top : 3%;
+    left : 10%;
+    max-width: 10%;
+    position: absolute;
+  }
+
+  .logotype{
+    width: 110px;
+    position: absolute;
+    top: 20%;
+    left: 16%;
+  }
+
+  .Title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    position: absolute;
+    color: #27375D;
+    top: 29%;
+    left: 16%;
+  }
+  .TexT{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color : #707070;
+    position: absolute;
+    top: 42%;
+    left: 16%;
+  }
+
+  .background {
+  	  background-image: url(../images/map.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: block;
+      position: absolute;
+      margin: auto;
+      top: 5%;
+      right: 0;
+      bottom: 0;
+      left: 20%;
+      max-width: 1300px;
+      max-height: 900px;
+      z-index: -2;
+      border: solid 3px #112C5D;
+  }
+
+
+}
