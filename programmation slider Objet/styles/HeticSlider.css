@@ -1,0 +1,16 @@
+.heticSlider{
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+
+.heticSlider .rightArrow {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 
+}
